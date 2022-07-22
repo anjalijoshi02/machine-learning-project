@@ -39,7 +39,42 @@ To send version/changes in git
 git push origin main
 ```
 
-To chech remote url
+To check remote url
 ```
 git remote -v
 ```
+
+To set up CI/CD pipeline in heroku we need these information
+1. Heroku API Key
+2. Application name( in heroku)
+3. Email id
+
+BUILD DOCKER IMAGE
+```
+docker build -t <image_name>:<tag_name> .
+```
+> Note: name of the docker shuld be in lowercase
+
+To list docker images
+```
+docker images 
+```
+
+
+Run docker image
+```
+docker run -p 5000:5000 -e PORT=5000 <image_id>
+```
+
+
+To check running images in docker
+```
+docker ps
+```
+
+To stop docker container 
+```
+docker stop <container_id>
+```
+
+
