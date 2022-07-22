@@ -77,4 +77,5 @@ To stop docker container
 docker stop <container_id>
 ```
 
-
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
+in this app:app means first app is module name(app.py) and second app is name of the Flask object(app=Flask) 
