@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 from typing import List # all the dadatypes are from typing module only
 
 # Declaring variables for setup function
@@ -6,7 +6,6 @@ PROJECT_NAME="housing-predictor"
 VERSION="0.0.1"
 AUTHOR="Anjali Joshi"
 DESCRIPTION="this is a machine learning project"
-PACKAGES=["housing"]
 REQUIREMENT_FILE_NAME="requirements.txt"
 
 def get_requirements_list()-> List[str]:
@@ -30,6 +29,6 @@ name=PROJECT_NAME,
 version=VERSION,
 author=AUTHOR,
 description=DESCRIPTION,
-packages=PACKAGES,
+packages=find_packages(),
 install_requires=get_requirements_list()
 )
