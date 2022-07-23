@@ -21,7 +21,11 @@ def get_requirements_list()-> List[str]:
     # This function will read the requirements.txt file and return all the libraries
     # written in that file
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
-        requirement_file.readlines()
+        requirement_list=[lib_name.replace("\n","") for lib_name in requirement_file.readlines()]
+        print(requirement_list)
+        if "-e ." in requirement_list:
+            requirement_list.remove("-e .")
+        return requirement_list
 
 
 setup(
