@@ -33,6 +33,7 @@ Experiment = namedtuple("Experiment", ["experiment_id", "initialization_timestam
 
 class Pipeline(Thread):
     experiment: Experiment = Experiment(*([None] * 11))
+    ## in the experiment, there are 11 attributes, we are initialising all the attributes as none
     experiment_file_path = None
 
     def __init__(self, config: Configuartion ) -> None:
