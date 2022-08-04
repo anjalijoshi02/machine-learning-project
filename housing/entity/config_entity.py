@@ -16,7 +16,7 @@ DataTransformationConfig=namedtuple("DataTransformationConfig",["add_bedroom_per
   # add_bedroom_per_room is a column name that we will add in the dataset. 
   # if we want to add this column then add_bedroom_per_room =True else false                                                            
 
-ModelTrainerConfig=namedtuple("ModelTrainerconfig",["trained_model_file_path","base_accuracy"])
+ModelTrainerConfig=namedtuple("ModelTrainerconfig",["trained_model_file_path","base_accuracy","model_config_file_path"])
 
 ModelEvaluationConfig=namedtuple("ModelEvaluationConfig",["model_evaluation_file_path","time_stamp"])
 
